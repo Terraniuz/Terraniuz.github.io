@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W929QM92');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W929QM92" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <header>
+        <h1>Gameplay.com</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Produtos</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="featured-products">
+        <h2>Produtos em destaque</h2>
+        <div class="product">
+            <img src="https://montink.s3.amazonaws.com/mockups/241330/Preto_1506001.png" alt="Produto 1">
+            <h3>Roupa do Dante</h3>
+            <p>Roupa para aqueles que curtem Devil may cry</p>
+            <p class="price">$10.99</p>
+            <button class="buy-button" onclick="buyProduct('a Roupa do Dantão', 10.99)">Comprar</button>
+        </div>
+        <div class="product">
+            <img src="https://img.elo7.com.br/product/zoom/2CF2FAF/caneca-sonic-caneca-personalizada-sonic.jpg"
+                alt="Produto 2">
+            <h3>Caneca do Sonic</h3>
+            <p>Uma caneca do ouriço mais rápido do mundo.</p>
+            <p class="price">$5.99</p>
+            <button class="buy-button" onclick="buyProduct('a caneta do Sanic the hedhog!!!', 5.99)">Comprar</button>
+        </div>
+
+    </section>
+    <section id="cart">
+        <h2>Carrinho de Compras</h2>
+        <ul id="cart-items">
+            <!-- Itens do carrinho serão adicionados aqui dinamicamente -->
+        </ul>
+        <p id="cart-total">Total: $0.00</p>
+        <button id="checkout-button" onclick="checkout()">Finalizar Compra</button>
+    </section>
+
+    <section id="contact">
+        <h2>Contato</h2>
+        <form id="contact-form" onsubmit="submitForm(event)">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Mensagem:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+            <button type="submit">Enviar Mensagem</button>
+        </form>
+        <p id="form-status"></p>
+    </section>
+
+
+    <footer>
+        <p>&copy; 2024 Game Store. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
